@@ -1,7 +1,7 @@
 import java.util.Scanner;
 import java.text.NumberFormat;
-import java.awt.*;   //TEST
-import javax.swing.*;   //TEST
+import java.awt.*;   
+import javax.swing.*;   
 
 public class Project1_PinalPatel{
   
@@ -66,7 +66,6 @@ public class Project1_PinalPatel{
       price = three.tPrice();
     }
     
-   
     // Selected seat stored so that it can be used to display on the boarding pass!
     selected_seat = scan.nextInt(); 
     
@@ -74,17 +73,11 @@ public class Project1_PinalPatel{
     System.out.println(" Your total price is " + fmt.format(price));
     System.out.println("Please press the number '1' to continue: ");
     toGUI = scan.nextInt();
-   
 
-         /* TEST STATEMENTS THAT WORK!*/
-    
-//    System.out.println(fmt.format(two.getPrice()));
-//    System.out.println(fmt.format(two.tPrice()));
-//    System.out.println(selectedFlight);
     
     
 //*************************************************************************************************************
-// BOARDING PASS GUI CODE EXPERIMENT!
+// BOARDING PASS GUI CODE
 //
 //*************************************************************************************************************
     
@@ -129,7 +122,6 @@ public class Project1_PinalPatel{
     JLabel nameDisplay = new JLabel("Passenger: " + name); 
     test4.add(nameDisplay);
     pPanel.add(test4);
-    
     
 //Test Panel 5
     JPanel test5 = new JPanel();
@@ -199,8 +191,6 @@ public class Project1_PinalPatel{
     test10.add(o2Display);
     pPanel.add(test10);
     
-
-    
 // Test Panel 11
     JPanel test11 = new JPanel();
     test11.setBackground(Color.white);
@@ -218,12 +208,7 @@ public class Project1_PinalPatel{
     JLabel rUpc = new JLabel(upc2, SwingConstants.RIGHT);
     up2.add(rUpc);
     pPanel.add(up2);
-    
 
-
-
-
-    
     frame.getContentPane().add(pPanel);//TEST
     frame.pack();
     frame.setVisible(true); 
