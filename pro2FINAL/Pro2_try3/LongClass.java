@@ -404,7 +404,7 @@ private JButton proceed, submit, reserve;
        cabOnePL.setForeground(Color.BLACK);
        cabOneLabel.setForeground(Color.BLACK); 
        
-       p1.add(cabOneLabel);     /*******************/
+       p1.add(cabOneLabel);     
        p1.add(cabOnePL);
        
        
@@ -418,7 +418,7 @@ private JButton proceed, submit, reserve;
        cabTwoPL.setForeground(Color.BLACK);
        cabTwoLabel.setForeground(Color.BLACK); 
        
-       p2.add(cabTwoLabel);     /*******************/
+       p2.add(cabTwoLabel);    
        p2.add(cabTwoPL);
        
        
