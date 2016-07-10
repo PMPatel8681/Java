@@ -64,10 +64,7 @@ public class Project3_Second{
     final String[] p4Array=lineDisplay("info.txt",34,43);
     final String[] p5Array=lineDisplay("info.txt",45,54);
     final String[] p6Array=lineDisplay("info.txt",56,65);
-    
-    
 
-    
 //Creating a JFrame
     JFrame frame = new JFrame();
     frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
