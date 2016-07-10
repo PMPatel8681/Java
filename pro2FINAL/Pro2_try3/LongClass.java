@@ -32,8 +32,6 @@ private final double SALES_TAX=.0625;
 private String cruiseLine="Murracruise", shipName="Murratime Limited", dateSailing="10/31/15 - 11/5/16";
 private String dest1Ex, dest2Ex, dest3Ex;
 
-
-
 private String cabin1 = "Cabin 11-1", cabin2 = "Cabin 11-2", cabin3 = "Cabin 11-3", cabin4 = "Cabin 11-4", cabin5 = "Cabin 11-5";
 private String cabin6 = "Cabin 11-6", cabin7 = "Cabin 11-7", cabin8 = "Cabin 11-8", cabin9 = "Cabin 11-9", cabin10 = "Cabin 11-10";
 private String suite1 = "Suite 11-S1", suite2 = "Suite 11-S2";
@@ -49,27 +47,18 @@ private JRadioButton Ex1Op1, Ex1Op2, Ex1Op3, Ex1Op4;
 private JRadioButton Ex2Op1, Ex2Op2, Ex2Op3;
 private JRadioButton Ex3Op1, Ex3Op2, Ex3Op3, Ex3Op4, Ex3Op5;
 
-
-
 private JTextField firstNameTF, lastNameTF, addressTF, numberInCabinTF, stateTF, cityTF, zipTF;
 
 private int vacantCabins=12, maxPeople, enteredNoInParty;
 
 private JButton proceed, submit, reserve;
 
-
-  
 //---------------------------------------------------------------------------------------------------------------------  
 //  Constructor Begin
 //--------------------------------------------------------------------------------------------------------------------- 
 
-
-
  public LongClass() 
     {
-   
-
-   
    
 // Adding RadioButtons!  
    
@@ -112,9 +101,7 @@ private JButton proceed, submit, reserve;
    cab10B.setForeground(Color.white);
    su1B.setForeground(Color.white);
    su2B.setForeground(Color.white);
-  
-   
-   
+
  rGroup = new ButtonGroup(); 
     rGroup.add(cab1B);
     rGroup.add(cab2B);
@@ -128,9 +115,7 @@ private JButton proceed, submit, reserve;
     rGroup.add(cab10B);
     rGroup.add(su1B);
     rGroup.add(su2B);
-    
 
-    
    
    ButtonListener listener = new ButtonListener();
    cab1B.addActionListener(listener);
@@ -152,7 +137,6 @@ private JButton proceed, submit, reserve;
    reserve.setPreferredSize(new Dimension(80,140));
    reserve.addActionListener(listener);
    
-      
    //EXCURSION BUTTONS
  // Ex1Op1, Ex1Op2, Ex1Op3, Ex1Op4;
    
@@ -239,10 +223,6 @@ private JButton proceed, submit, reserve;
    Ex3Op5.setForeground(Color.white);
    
    
-   
-   
-   
-   
     //---------------------------------------------------------------------------------------------------------    
    // CODE FOR THE DINING RADIO BUTTONS
     sevenPM=new JRadioButton("7:00 PM");
@@ -261,29 +241,17 @@ private JButton proceed, submit, reserve;
     dGroup.add(sevenPM);
     dGroup.add(ninePM);
 //---------------------------------------------------------------------------------------------------------  
-   
-   
-   
-   
-   
-   
+
    
         // Set title and default close operation
         setTitle("MurraCruise");
         setDefaultCloseOperation(EXIT_ON_CLOSE);
-        
-        
-        
+  
         // Set a background for JFrame
         setContentPane(new JLabel(new ImageIcon("C:\\Users\\lanip\\Downloads\\pro2FINAL\\Pro2_try3\\ci.jpg")));
-        
-        
-        
+
         // Set some layout, say FlowLayout
         setLayout(new FlowLayout());
-        
-        
-
         
         // Create a JPanel
         headerPanel=new JPanel();
@@ -293,13 +261,6 @@ private JButton proceed, submit, reserve;
         excursion2Panel=new JPanel();
         excursion3Panel=new JPanel();
         
-        
-
-        
-
-
-      
-        
         // Set the background, black with 125 as alpha value
         // This is less transparent
         headerPanel.setBackground(new Color(0,0,0,100));
@@ -308,9 +269,7 @@ private JButton proceed, submit, reserve;
         excursion1Panel.setBackground(new Color(0,0,0,100));
         excursion2Panel.setBackground(new Color(0,0,0,100));
         excursion3Panel.setBackground(new Color(0,0,0,100));
-      
-        
-        
+
         // Create another JPanel
         p1=new JPanel();
         p2=new JPanel();
@@ -391,7 +350,6 @@ private JButton proceed, submit, reserve;
         usrInputLabel.setFont(footerFont3);
         usrInputLabel.setForeground(new Color(243,243,243,175));
         footerPanel2.add(usrInputLabel);
-        
 
         firstNameLabel=new JLabel("First Name: ");
         Font smallFont=new Font("Times New Roman", Font.BOLD, 15);
@@ -434,13 +392,6 @@ private JButton proceed, submit, reserve;
         excursion3Panel.add(Ex3Op3);
         excursion3Panel.add(Ex3Op4);
         excursion3Panel.add(Ex3Op5);
-        
-       
-        
-        
-
-    
-        
         
         //CABIN 1 LABELS
        cabOneLabel=new JLabel(cabin1);
@@ -512,12 +463,10 @@ private JButton proceed, submit, reserve;
        p5.add(cabFiveLabel);     /*******************/
        p5.add(cabFivePL);
        
-       p5.setLayout(new BoxLayout(p5, BoxLayout.Y_AXIS));                       //*****************************************
+       p5.setLayout(new BoxLayout(p5, BoxLayout.Y_AXIS));          //*****************************************
        cabFivePL.setAlignmentX(Component.CENTER_ALIGNMENT);        //BOXLAYOUT CENTERED ALONG THE Y-AXIS HERE
        cabFiveLabel.setAlignmentX(Component.CENTER_ALIGNMENT);     //******************************************
-       
-       
-       
+
        //SUITE ONE LABELS
        suiteOneLabel=new JLabel(suite1);
        suiteOnePL=new JLabel(cabin8000);
@@ -528,14 +477,13 @@ private JButton proceed, submit, reserve;
        suiteOnePL.setForeground(Color.BLACK);
        suiteOneLabel.setForeground(Color.BLACK); 
        
-       p6.add(suiteOneLabel);     /*******************/
+       p6.add(suiteOneLabel);    
        p6.add(suiteOnePL);
        
-       p6.setLayout(new BoxLayout(p6, BoxLayout.Y_AXIS));                        //*****************************************
+       p6.setLayout(new BoxLayout(p6, BoxLayout.Y_AXIS));           //*****************************************
        suiteOnePL.setAlignmentX(Component.CENTER_ALIGNMENT);        //BOXLAYOUT CENTERED ALONG THE Y-AXIS HERE
        suiteOneLabel.setAlignmentX(Component.CENTER_ALIGNMENT);     //******************************************
        
-
        //CABIN 6 LABELS
        cabSixLabel=new JLabel(cabin6);
        cabSixPL=new JLabel(cabin1200);
@@ -546,11 +494,9 @@ private JButton proceed, submit, reserve;
        cabSixPL.setForeground(Color.BLACK);
        cabSixLabel.setForeground(Color.BLACK); 
        
-       p7.add(cabSixLabel);     /*******************/
+       p7.add(cabSixLabel);    
        p7.add(cabSixPL);
-       
-       
-       
+
        //CABIN 7 LABELS
        cabSevenLabel=new JLabel(cabin7);
        cabSevenPL=new JLabel(cabin1400);
@@ -561,10 +507,9 @@ private JButton proceed, submit, reserve;
        cabSevenPL.setForeground(Color.BLACK);
        cabSevenLabel.setForeground(Color.BLACK); 
        
-       p8.add(cabSevenLabel);     /*******************/
+       p8.add(cabSevenLabel);  
        p8.add(cabSevenPL);
        
-   
        //CABIN 8 LABELS
        cabEightLabel=new JLabel(cabin8);
        cabEightPL=new JLabel(cabin1400);
@@ -575,11 +520,9 @@ private JButton proceed, submit, reserve;
        cabEightPL.setForeground(Color.BLACK);
        cabEightLabel.setForeground(Color.BLACK); 
        
-       p9.add(cabEightLabel);     /*******************/
+       p9.add(cabEightLabel);   
        p9.add(cabEightPL);
-       
-       
-       
+
        //CABIN 9 LABELS 
        cabNineLabel=new JLabel(cabin9);
        cabNinePL=new JLabel(cabin1250);
@@ -590,10 +533,8 @@ private JButton proceed, submit, reserve;
        cabNinePL.setForeground(Color.BLACK);
        cabNineLabel.setForeground(Color.BLACK); 
        
-       p10.add(cabNineLabel);     /*******************/
+       p10.add(cabNineLabel);  
        p10.add(cabNinePL);
-       
-       
        
        //CABIN 10 LABELS 
        cabTenLabel=new JLabel(cabin10);
@@ -605,14 +546,12 @@ private JButton proceed, submit, reserve;
        cabTenPL.setForeground(Color.BLACK);
        cabTenLabel.setForeground(Color.BLACK); 
        
-       p11.add(cabTenLabel);     /*******************/
+       p11.add(cabTenLabel);   
        p11.add(cabTenPL);
        
-       p11.setLayout(new BoxLayout(p11, BoxLayout.Y_AXIS));                  //*****************************************
+       p11.setLayout(new BoxLayout(p11, BoxLayout.Y_AXIS));       //*****************************************
        cabTenPL.setAlignmentX(Component.CENTER_ALIGNMENT);        //BOXLAYOUT CENTERED ALONG THE Y-AXIS HERE
        cabTenLabel.setAlignmentX(Component.CENTER_ALIGNMENT);     //******************************************
-       
-       
        
        //SUITE TWO LABELS
        suiteTwoLabel=new JLabel(suite2);
@@ -624,20 +563,12 @@ private JButton proceed, submit, reserve;
        suiteTwoPL.setForeground(Color.BLACK);
        suiteTwoLabel.setForeground(Color.BLACK); 
        
-       p12.add(suiteTwoLabel);     /*******************/
+       p12.add(suiteTwoLabel);  
        p12.add(suiteTwoPL);
        
-       p12.setLayout(new BoxLayout(p12, BoxLayout.Y_AXIS));                      //*****************************************
+       p12.setLayout(new BoxLayout(p12, BoxLayout.Y_AXIS));         //*****************************************
        suiteTwoPL.setAlignmentX(Component.CENTER_ALIGNMENT);        //BOXLAYOUT CENTERED ALONG THE Y-AXIS HERE
        suiteTwoLabel.setAlignmentX(Component.CENTER_ALIGNMENT); 
-       
-       
- //-------------------------------------------------------
-
-
-     
-//----------------------------------------------------------      
-       
        
         // Add the panels to the JFrame
         add(headerPanel);
@@ -663,9 +594,7 @@ private JButton proceed, submit, reserve;
         excursion2Panel.setVisible(false);
         excursion3Panel.setVisible(false);
         reserve.setVisible(false);
-        
-        
-        
+
         footerPanel.add(cab1B);
         footerPanel.add(cab2B);
         footerPanel.add(cab3B);
@@ -678,23 +607,10 @@ private JButton proceed, submit, reserve;
         footerPanel.add(cab9B);
         footerPanel.add(cab10B);
         footerPanel.add(su2B);
-        
-        
- 
 
-     
-        
         add(footerPanel);
         add(footerPanel2);
-    
-        
-        
-    
-        
-        
-    
-        
-        
+
 //---------------------------------------------------------------------------------------------------------------
 //  JBUTTON FOR FOOTERPANEL2
 //----------------------------------------------------------------------------------------------------------------        
@@ -703,22 +619,15 @@ private JButton proceed, submit, reserve;
        proceed.setPreferredSize(new Dimension(170, 25));
        proceed.addActionListener(listener);
        footerPanel.add(proceed);
-       
 
-       
 //---------------------------------------------------------------------------------------------------------------        
 // TEXTFIELDS FOR FOOTERPANEL2
 //---------------------------------------------------------------------------------------------------------------       
        firstNameTF=new JTextField(13);
        firstNameTF.addActionListener(listener);
-//    firstNameTF.setHorizontalAlignment(JTextField.CENTER);
        footerPanel2.add(firstNameTF);
        firstNameTF.setBackground(Color.white);
-       
-       
- //      footerPanel2.setVisible(false);
-      
-  //     numberInCabLabel
+
       lastNameLabel=new JLabel("Last Name: ");  
       lastNameLabel.setFont(smallFont);
       lastNameLabel.setForeground(new Color(243,243,243,175));
@@ -727,7 +636,6 @@ private JButton proceed, submit, reserve;
       //LAST NAME TEXT FIELD
       lastNameTF=new JTextField(12);
       lastNameTF.addActionListener(listener);
-//    lastNameTF.setHorizontalAlignment(JTextField.CENTER);
       footerPanel2.add(lastNameTF);
       lastNameTF.setBackground(Color.white);
       
@@ -790,8 +698,7 @@ private JButton proceed, submit, reserve;
       numberInCabinTF.addActionListener(listener);
       numberInCabinTF.setBackground(Color.white);
       footerPanel2.add( numberInCabinTF);
-      
-            
+
       //DINING TIME LABEL
       diningTimeLabel=new JLabel("Dining Time: ");  
       diningTimeLabel.setFont(smallFont);
@@ -802,26 +709,14 @@ private JButton proceed, submit, reserve;
     footerPanel2.add(sevenPM);
     footerPanel2.add(ninePM);
       
-      
-      
      //SUBMIT BUTTON 
        submit=new JButton("Submit");
       submit.setBackground(Color.white);
       submit.setPreferredSize(new Dimension(300, 25));
       submit.addActionListener(listener);
       footerPanel2.add(submit);
-      
-  
-      
-/*      // EXCEED NO IN PARTY LABEL        
-        exceedMaxLabel=new JLabel("Try Again");
-        exceedMaxLabel.setFont(smallFont);
-        exceedMaxLabel.setForeground(new Color(243,243,243,175));
-        exceedMaxLabel.setBackground(Color.black);
-         footerPanel2.add(exceedMaxLabel);
-         exceedMaxLabel.setVisible(false);  */
 
-footerPanel2.setVisible(false);
+      footerPanel2.setVisible(false);
         
 // JFRAME SIZE!!!!!!!----------------------------------------------------------------------------------
 // make it visible
@@ -834,402 +729,85 @@ footerPanel2.setVisible(false);
   
  NumberFormat fmt=  NumberFormat.getCurrencyInstance();
 
- 
  private class ButtonListener implements ActionListener{
-   
 
-   
    public void actionPerformed(ActionEvent event){
     Object source = event.getSource();
       
     if (cab1B.isSelected())
      {  
-/*      cab1B.setText(occupied); 
-      cab2B.setText(cabin2);
-      cab3B.setText(cabin3);
-      cab4B.setText(cabin4);
-      cab5B.setText(cabin5);   
-      cab6B.setText(cabin6);
-      cab7B.setText(cabin7);
-      cab8B.setText(cabin8);
-      cab9B.setText(cabin9);
-      cab10B.setText(cabin10);
-      su1B.setText(suite1);
-      su2B.setText(suite2);    */
       
       maxPeople=2;
       cabinPrice= 1200.00;
       selectedCabin=cab1B.getText();
-     // System.out.println(fmt.format(cabinPrice));
-      
-/*      cab1B.setEnabled(false);
-      cab2B.setEnabled(true);
-      cab3B.setEnabled(true);
-      cab4B.setEnabled(true);
-      cab5B.setEnabled(true);
-      cab6B.setEnabled(true);
-      cab7B.setEnabled(true);
-      cab8B.setEnabled(true);
-      cab9B.setEnabled(true);
-      cab10B.setEnabled(true);
-      su1B.setEnabled(true);
-      su2B.setEnabled(true);  */
 
-      
  } else  if (cab2B.isSelected()){
    
-/*        cab1B.setText(cabin1); 
-      cab2B.setText(occupied);
-      cab3B.setText(cabin3);
-      cab4B.setText(cabin4);
-      cab5B.setText(cabin5);   
-      cab6B.setText(cabin6);
-      cab7B.setText(cabin7);
-      cab8B.setText(cabin8);
-      cab9B.setText(cabin9);
-      cab10B.setText(cabin10);
-      su1B.setText(suite1);
-      su2B.setText(suite2);  */
-      
       maxPeople=3;
       cabinPrice= 1400;
       selectedCabin=cab2B.getText();
        
-/*       cab1B.setEnabled(true);
-       cab2B.setEnabled(false);
-       cab3B.setEnabled(true);
-       cab4B.setEnabled(true);
-       cab5B.setEnabled(true);
-       cab6B.setEnabled(true);
-       cab7B.setEnabled(true);
-       cab8B.setEnabled(true);
-       cab9B.setEnabled(true);
-       cab10B.setEnabled(true);
-       su1B.setEnabled(true);
-       su2B.setEnabled(true);  */
-
-      
 
  } else  if (cab3B.isSelected()){
    
-/*        cab1B.setText(cabin1); 
-      cab2B.setText(cabin2);
-      cab3B.setText(occupied);
-      cab4B.setText(cabin4);
-      cab5B.setText(cabin5);   
-      cab6B.setText(cabin6);
-      cab7B.setText(cabin7);
-      cab8B.setText(cabin8);
-      cab9B.setText(cabin9);
-      cab10B.setText(cabin10);
-      su1B.setText(suite1);
-      su2B.setText(suite2);   */
-      
       maxPeople=3;
       cabinPrice= 1400;
       selectedCabin=cab3B.getText();
        
-/*       cab1B.setEnabled(true);
-       cab2B.setEnabled(true);
-       cab3B.setEnabled(false);
-       cab4B.setEnabled(true);
-       cab5B.setEnabled(true);
-       cab6B.setEnabled(true);
-       cab7B.setEnabled(true);
-       cab8B.setEnabled(true);
-       cab9B.setEnabled(true);
-       cab10B.setEnabled(true);
-       su1B.setEnabled(true);
-       su2B.setEnabled(true);  */
-      
     } else  if (cab4B.isSelected()){
-      
- /*       cab1B.setText(cabin1); 
-      cab2B.setText(cabin2);
-      cab3B.setText(cabin3);
-      cab4B.setText(occupied);
-      cab5B.setText(cabin5);   
-      cab6B.setText(cabin6);
-      cab7B.setText(cabin7);
-      cab8B.setText(cabin8);
-      cab9B.setText(cabin9);
-      cab10B.setText(cabin10);
-      su1B.setText(suite1);
-      su2B.setText(suite2);  */
       
       maxPeople=2;
       cabinPrice= 1250;
       selectedCabin=cab4B.getText();
        
-/*       cab1B.setEnabled(true);
-       cab2B.setEnabled(true);
-       cab3B.setEnabled(true);
-       cab4B.setEnabled(false);
-       cab5B.setEnabled(true);
-       cab6B.setEnabled(true);
-       cab7B.setEnabled(true);
-       cab8B.setEnabled(true);
-       cab9B.setEnabled(true);
-       cab10B.setEnabled(true);
-       su1B.setEnabled(true);
-       su2B.setEnabled(true);  */
-       
     } else  if (cab5B.isSelected()){
-      
-/*        cab1B.setText(cabin1); 
-      cab2B.setText(cabin2);
-      cab3B.setText(cabin3);
-      cab4B.setText(cabin4);
-      cab5B.setText(occupied);   
-      cab6B.setText(cabin6);
-      cab7B.setText(cabin7);
-      cab8B.setText(cabin8);
-      cab9B.setText(cabin9);
-      cab10B.setText(cabin10);
-      su1B.setText(suite1);
-      su2B.setText(suite2);  */
       
       maxPeople=3;
       cabinPrice= 1600;
       selectedCabin=cab5B.getText();
        
- /*      cab1B.setEnabled(true);
-       cab2B.setEnabled(true);
-       cab3B.setEnabled(true);
-       cab4B.setEnabled(true);
-       cab5B.setEnabled(false);
-       cab6B.setEnabled(true);
-       cab7B.setEnabled(true);
-       cab8B.setEnabled(true);
-       cab9B.setEnabled(true);
-       cab10B.setEnabled(true);
-       su1B.setEnabled(true);
-       su2B.setEnabled(true);  */
-      
     } else  if (su1B.isSelected()){
-      
-     
-/*        cab1B.setText(cabin1); 
-      cab2B.setText(cabin2);
-      cab3B.setText(cabin3);
-      cab4B.setText(cabin4);
-      cab5B.setText(cabin5);   
-      cab6B.setText(cabin6);
-      cab7B.setText(cabin7);
-      cab8B.setText(cabin8);
-      cab9B.setText(cabin9);
-      cab10B.setText(cabin10);
-      su1B.setText(occupied);
-      su2B.setText(suite2);   */
       
       maxPeople=4;
       cabinPrice= 8000;
        selectedCabin=su1B.getText();
-       
-/*       cab1B.setEnabled(true);
-       cab2B.setEnabled(true);
-       cab3B.setEnabled(true);
-       cab4B.setEnabled(true);
-       cab5B.setEnabled(true);
-       cab6B.setEnabled(true);
-       cab7B.setEnabled(true);
-       cab8B.setEnabled(true);
-       cab9B.setEnabled(true);
-       cab10B.setEnabled(true);
-       su1B.setEnabled(false);
-       su2B.setEnabled(true);  */
       
     } else  if (cab6B.isSelected()){
-      
-/*        cab1B.setText(cabin1); 
-      cab2B.setText(cabin2);
-      cab3B.setText(cabin3);
-      cab4B.setText(cabin4);
-      cab5B.setText(cabin5);   
-      cab6B.setText(occupied);
-      cab7B.setText(cabin7);
-      cab8B.setText(cabin8);
-      cab9B.setText(cabin9);
-      cab10B.setText(cabin10);
-      su1B.setText(suite1);
-      su2B.setText(suite2);  */
-      
+
       maxPeople=2;
       cabinPrice= 1200;
       selectedCabin=cab6B.getText();
-       
-/*       cab1B.setEnabled(true);
-       cab2B.setEnabled(true);
-       cab3B.setEnabled(true);
-       cab4B.setEnabled(true);
-       cab5B.setEnabled(true);
-       cab6B.setEnabled(false);
-       cab7B.setEnabled(true);
-       cab8B.setEnabled(true);
-       cab9B.setEnabled(true);
-       cab10B.setEnabled(true);
-       su1B.setEnabled(true);
-       su2B.setEnabled(true);  */
       
     } else  if (cab7B.isSelected()){
-      
-/*        cab1B.setText(cabin1); 
-      cab2B.setText(cabin2);
-      cab3B.setText(cabin3);
-      cab4B.setText(cabin4);
-      cab5B.setText(cabin5);   
-      cab6B.setText(cabin6);
-      cab7B.setText(occupied);
-      cab8B.setText(cabin8);
-      cab9B.setText(cabin9);
-      cab10B.setText(cabin10);
-      su1B.setText(suite1);
-      su2B.setText(suite2);  */
       
       maxPeople=3;
       cabinPrice= 1400;
       selectedCabin=cab7B.getText();
-       
-/*       cab1B.setEnabled(true);
-       cab2B.setEnabled(true);
-       cab3B.setEnabled(true);
-       cab4B.setEnabled(true);
-       cab5B.setEnabled(true);
-       cab6B.setEnabled(true);
-       cab7B.setEnabled(false);
-       cab8B.setEnabled(true);
-       cab9B.setEnabled(true);
-       cab10B.setEnabled(true);
-       su1B.setEnabled(true);
-       su2B.setEnabled(true); */
       
     } else  if (cab8B.isSelected()){
-      
-/*        cab1B.setText(cabin1); 
-      cab2B.setText(cabin2);
-      cab3B.setText(cabin3);
-      cab4B.setText(cabin4);
-      cab5B.setText(cabin5);   
-      cab6B.setText(cabin6);
-      cab7B.setText(cabin7);
-      cab8B.setText(occupied);
-      cab9B.setText(cabin9);
-      cab10B.setText(cabin10);
-      su1B.setText(suite1);
-      su2B.setText(suite2);  */
       
       maxPeople=3;
       cabinPrice= 1400;
       selectedCabin=cab8B.getText();
-       
-/*       cab1B.setEnabled(true);
-       cab2B.setEnabled(true);
-       cab3B.setEnabled(true);
-       cab4B.setEnabled(true);
-       cab5B.setEnabled(true);
-       cab6B.setEnabled(true);
-       cab7B.setEnabled(true);
-       cab8B.setEnabled(false);
-       cab9B.setEnabled(true);
-       cab10B.setEnabled(true);
-       su1B.setEnabled(true);
-       su2B.setEnabled(true);  */
       
     } else  if (cab9B.isSelected()){
-      
-/*        cab1B.setText(cabin1); 
-      cab2B.setText(cabin2);
-      cab3B.setText(cabin3);
-      cab4B.setText(cabin4);
-      cab5B.setText(cabin5);   
-      cab6B.setText(cabin6);
-      cab7B.setText(cabin7);
-      cab8B.setText(cabin8);
-      cab9B.setText(occupied);
-      cab10B.setText(cabin10);
-      su1B.setText(suite1);
-      su2B.setText(suite2);  */
       
       maxPeople=2;
       cabinPrice= 1250;
       selectedCabin=cab9B.getText();
        
-/*       cab1B.setEnabled(true);
-       cab2B.setEnabled(true);
-       cab3B.setEnabled(true);
-       cab4B.setEnabled(true);
-       cab5B.setEnabled(true);
-       cab6B.setEnabled(true);
-       cab7B.setEnabled(true);
-       cab8B.setEnabled(true);
-       cab9B.setEnabled(false);
-       cab10B.setEnabled(true);
-       su1B.setEnabled(true);
-       su2B.setEnabled(true);  */
-      
     } else  if (cab10B.isSelected()){
-      
-/*        cab1B.setText(cabin1); 
-      cab2B.setText(cabin2);
-      cab3B.setText(cabin3);
-      cab4B.setText(cabin4);
-      cab5B.setText(cabin5);   
-      cab6B.setText(cabin6);
-      cab7B.setText(cabin7);
-      cab8B.setText(cabin8);
-      cab9B.setText(cabin9);
-      cab10B.setText(occupied);
-      su1B.setText(suite1);
-      su2B.setText(suite2);  */
       
       maxPeople=3;
       cabinPrice= 1600;
       selectedCabin=cab10B.getText();
        
-/*       cab1B.setEnabled(true);
-       cab2B.setEnabled(true);
-       cab3B.setEnabled(true);
-       cab4B.setEnabled(true);
-       cab5B.setEnabled(true);
-       cab6B.setEnabled(true);
-       cab7B.setEnabled(true);
-       cab8B.setEnabled(true);
-       cab9B.setEnabled(true);
-       cab10B.setEnabled(false);
-       su1B.setEnabled(true);
-       su2B.setEnabled(true);  */
-      
     } else  if (su2B.isSelected()){
-      
- /*       cab1B.setText(cabin1); 
-      cab2B.setText(cabin2);
-      cab3B.setText(cabin3);
-      cab4B.setText(cabin4);
-      cab5B.setText(cabin5);   
-      cab6B.setText(cabin6);
-      cab7B.setText(cabin7);
-      cab8B.setText(cabin8);
-      cab9B.setText(cabin9);
-      cab10B.setText(cabin10);
-      su1B.setText(suite1);
-      su2B.setText(occupied); */
       
        cabinPrice= 8000;
        maxPeople=4;
        selectedCabin=su2B.getText();
        
-/*       cab1B.setEnabled(true);
-       cab2B.setEnabled(true);
-       cab3B.setEnabled(true);
-       cab4B.setEnabled(true);
-       cab5B.setEnabled(true);
-       cab6B.setEnabled(true);
-       cab7B.setEnabled(true);
-       cab8B.setEnabled(true);
-       cab9B.setEnabled(true);
-       cab10B.setEnabled(true);
-       su1B.setEnabled(true);
-       su2B.setEnabled(false); */
     }
     
     if(source == proceed){
@@ -1252,11 +830,8 @@ footerPanel2.setVisible(false);
               if (source == sevenPM)
                {enteredDiningTime = "7:00 PM";}
                 else {enteredDiningTime = "9:00 PM";}
-                
 
-      
              if (enteredNoInParty > maxPeople){
-        
 
                submit.setText("Max in party for this cabin is " + maxPeople+"," +" try again!");
              } else {
@@ -1264,13 +839,9 @@ footerPanel2.setVisible(false);
                excursion2Panel.setVisible(true);
                excursion3Panel.setVisible(true);
                reserve.setVisible(true);
-               
 
               }
- 
 
-             
-          
       } 
                   
 //-----------------------------------------------------------------------------------------
@@ -1320,16 +891,13 @@ footerPanel2.setVisible(false);
         
         
         if(source==reserve){
-         //System.out.println("I don't know if I'm going to make it");
-          
-          
+
           rGroup.getSelection().setEnabled(false);
-  //        rGroup.getSelection().setBackground(Color.red);
           System.out.println();
           System.out.println(finalOutput());
           vacantCabins-= 1;
           
-          //EXCURSION SELECTION DISABLED ONCE EXIT BUTTON IS CLICKED.
+//EXCURSION SELECTION DISABLED ONCE EXIT BUTTON IS CLICKED.
           excursion1Panel.setVisible(false);  
           excursion2Panel.setVisible(false);
           excursion3Panel.setVisible(false);
@@ -1358,25 +926,12 @@ footerPanel2.setVisible(false);
           while(!more.equals("Y")){
             setVisible(false);
           }
-          
-
    }
-        
-        
- //       if(vacantCabins == 0){setVisible(false);} // HECK NAH!
 
   }
-   
-
-
 
    }
  
-
- 
- 
-
-
 // \/\/\/\/\/\/\/\/\/\/\/\/\/\/-----MY 7 METHODS -----\/\/\/\/\/\/\/\/\/\/\/\/\/\/
 
  
