@@ -1,2 +1,5 @@
-This project outputs a boarding pass based on user input. There are 2 classes. The Flight class is a blueprint that
-contains the attributes and behaviors of the Flight objects to be used in the main class. 
+This project outputs a boarding pass based on user input. There are 2 classes. The Flight class is 
+a blueprint that contains the attributes and behaviors of the Flight objects to be used in the main 
+class. 
+
+The Project1_PinalPatel class composes the user interface and uses the flight objects accordingly. 
