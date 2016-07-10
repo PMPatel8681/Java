@@ -75,15 +75,7 @@ public class Project3_Second{
     
 //layout
     frame.setLayout(new FlowLayout());
-    
 
-
-    
-//Creation of a header JPanel
- /*   JPanel header=new JPanel();
-    header.setPreferredSize(new Dimension(1300, 450));
-    header.setBackground(new Color(0,0,0,50));
-    frame.add(header); */
     
 // Adding an instance of the Spaceship class in the header panel    
     frame.add(new Spaceship());  
@@ -168,29 +160,11 @@ public class Project3_Second{
         p6Label.setText(Arrays.toString(p6Array));  //Printing the people in a flight to this JLabel!
         p6Label.setForeground(Color.WHITE);
         sixth.add(p6Label); 
-        
-//Test code for mouseListener*********************************************************
-  /*      private class mList implements MouseListener{
-          
-          public void mousePressed (MouseEvent event){}
-          public void mouseClicked (MouseEvent event){}
-          public void mouseReleased (MouseEvent event){} 
-          public void mouseEntered (MouseEvent event){} 
-          public void mouseExited (MouseEvent event){} 
-        
-        } */
-    
- 
+
     frame.pack();
     frame.setSize(1300, 700);
     frame.setResizable(false);
     frame.setVisible(true);
-    
-    
-  /*  for(String w : secondArray)
-    {
-     System.out.println(w);
-    } */
   
   }
 
